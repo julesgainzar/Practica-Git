@@ -1,25 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta menú</title>
+    <style>
+        :root {
+            --fondo: #f7f3ec;
+            --texto: #2b2a28;
+            --suave: #6b665e;
+            --acento: #8a3b2e;
+            --linea: #d9d2c5;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: var(--fondo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--fondo);
+            border-bottom: 1px solid var(--linea);
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0.9rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.75rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: var(--texto);
+            text-decoration: none;
+            font-size: 1.05rem;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+        nav a:hover, nav a:focus-visible {
+            border-bottom-color: var(--acento);
+            outline: none;
+        }
+        main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+        section { margin-bottom: 3rem; }
+        h2 {
+            font-size: 2rem;
+            margin: 0 0 1.25rem;
+            color: var(--acento);
+            border-bottom: 1px solid var(--linea);
+            padding-bottom: 0.4rem;
+        }
+        .plato {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px dotted var(--linea);
+        }
+        .plato h3 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+        .plato p { margin: 0.15rem 0 0; color: var(--suave); font-size: 0.95rem; }
+        .precio { font-weight: 600; white-space: nowrap; }
+    </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#desayunos">Desayuno</a></li>
+            <li><a href="#desayunos">Desayunos</a></li>
             <li><a href="#comida">Comida</a></li>
             <li><a href="#postres">Postres</a></li>
-            <li><a href="bebidas">Bebidas</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="desayonos">
+        <section id="desayunos">
             <h2>Desayunos</h2>
-            
+
+            <article class="plato">
+                <div>
+                    <h3>Chilaquiles verdes</h3>
+                    <p>Totopos con salsa verde, crema, queso fresco y cebolla. Con huevo o pollo.</p>
+                </div>
+                <span class="precio">$95</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Huevos al gusto</h3>
+                    <p>Estrellados, revueltos o a la mexicana, con frijoles y pan tostado.</p>
+                </div>
+                <span class="precio">$85</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Hot cakes con fruta</h3>
+                    <p>Tres piezas con miel de maple, mantequilla y fruta de temporada.</p>
+                </div>
+                <span class="precio">$80</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Molletes</h3>
+                    <p>Bolillo con frijoles, queso gratinado y pico de gallo.</p>
+                </div>
+                <span class="precio">$70</span>
+            </article>
         </section>
-    </main>
+
+        <section id="comida">
+            <h2>Comida</h2>
+
+            <article class="plato">
+                <div>
+                    <h3>Sopa de tortilla</h3>
+                    <p>Caldo de jitomate con aguacate, queso panela, crema y chile pasilla.</p>
+                </div>
+                <span class="precio">$75</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Tacos de pastor</h3>
+                    <p>Cinco tacos con piña, cilantro, cebolla y salsa roja.</p>
+                </div>
+                <span class="precio">$110</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Enchiladas suizas</h3>
+                    <p>Rellenas de pollo, bañadas en salsa verde y gratinadas con queso.</p>
+                </div>
+                <span class="precio">$120</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Arrachera con guarniciones</h3>
+                    <p>Corte a la parrilla con arroz, frijoles de la olla y nopales asados.</p>
+                </div>
+                <span class="precio">$185</span>
+            </article>
+
+            <article class="plato">
+                <div>
+                    <h3>Ensalada de la casa</h3>
+                    <p>Lechugas mixtas, jitomate cherry, pepino, nuez y vinagreta de limón.</p>
+                </div>
+                <span class="precio">$90</span>
+            </article>
+        </section>
+
+
 </body>
 </html>
